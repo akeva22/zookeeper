@@ -1,4 +1,5 @@
 const express = require('express');
+const PORT = process.env.PORT || 3001
 const app = express();
 const fs = require('fs');
 const path = require('path');
@@ -9,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON data
 app.use(express.json());
 
-const PORT = process.env.PORT || 3001
+
 
 const { animals } = require('./data/animals');
 
